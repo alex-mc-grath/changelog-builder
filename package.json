@@ -1,0 +1,41 @@
+{
+  "name": "linear-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.toptal.com/screening/Serguei-Nevarko.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@linear/sdk": "^1.22.0",
+    "axios": "^0.25.0",
+    "bcryptjs": "^2.4.3",
+    "cuid": "^2.1.8",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "express-validator": "^6.14.0",
+    "formik": "^2.2.9",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.10",
+    "react-router-dom": "^6.2.1",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15"
+  }
+}
